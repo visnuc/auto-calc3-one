@@ -1,4 +1,4 @@
-# auto-calc3-one
+# Auto-calc3 (one)
 
 **version 0.0.1**
 

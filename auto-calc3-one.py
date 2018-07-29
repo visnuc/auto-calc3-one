@@ -48,12 +48,6 @@ def hyperna_calc3():
     elif kwash == "2":
         curt = (wt*9)*0.75
     print("\nCurtailed diet:", round(curt, 2), "ml/2h + Salt added.")
-    ques = str(input("Want to do anything else? (y/n): "))
-    if ques == "y" or ques == "Y":
-        from main3 import main3
-    else:
-        print("Thanks for using auto-calc!")
-        exit()
 
 # hyperna_msg3()
 # hyperna_calc3()
@@ -82,12 +76,6 @@ def sevsepsis3():
         print("Bolus 2:", round(bolus, 2), "ml in 30 min (HS/NS),", "If MAP <50")
         print("Bolus 3:", round(bolus, 2), "ml in 30 min (HS/NS),", "If MAP <50")
         print("START Ionotropes, monitor BP every 15 min\n")
-    ques = str(input("Want to do anything else? (y/n): "))
-    if ques == "y" or ques == "Y":
-        from main3 import main3
-    else:
-        print("Thanks for using auto-calc!")
-        exit()
 
 # sevsepsis3()
 
@@ -140,12 +128,6 @@ till correction\n")
             print(round(wt*70, 2), "ml in 2.5 hrs (AC/NS)\n")
     else:
         print("Please restart the application.")
-    ques = str(input("Want to do anything else? (y/n): "))
-    if ques == "y" or ques == "Y":
-        from main3 import main3
-    else:
-        print("Thanks for using auto-calc!")
-        exit()
 
 # sevdh3()
 
@@ -164,12 +146,6 @@ then\n", round(wt*5, 2), "ml/hr for 8-10 hrs (GORS)\n")
     print("\n", round(wt*75, 2), "ml over 4-6 hrs (GORS)\n")
   else:
     print(" \nPlease try again.")
-  ques = str(input("Want to do anything else? (y/n): "))
-  if ques == "y" or ques == "Y":
-    from main3 import main3
-  else:
-    print("Thanks for using auto-calc!")
-    exit()
 
 # somedh3()
 # input("Press `Enter' to exit.")
@@ -182,12 +158,6 @@ def xdh3():
     wt = float(input("Weight (kg): "))
     xdh_corr = wt * (x * 10)
     print(round(xdh_corr, 2), "ml in 4-6 hrs\n")
-    ques = str(input("Want to do anything else? (y/n): "))
-    if ques == "y" or ques == "Y":
-        from main3 import main3
-    else:
-        print("Thanks for using auto-calc!")
-        exit()
 
 # xdh3()
 # input("Please press `Enter' to exit.")
@@ -204,13 +174,8 @@ def map_bp3():
     # MAP formula 2:
     # map_bp = ((sbp-dbp)/3)+dbp
     print("\nMAP is", round(map_bp, 2), "mmHg\
-\n[Reference: Child >50; Adult >65] \n")
-    ques = str(input("Want to do anything else? (y/n): "))
-    if ques == "y" or ques == "Y":
-        from main3 import main3
-    else:
-        print("Thanks for using auto-calc!")
-        exit()
+\n>> Reference value (mm Hg):\n - Child >50\n - Adult >65\n<<")
+
 
 # map_bp3()
 # input("Please press `Enter' to exit")
@@ -248,12 +213,6 @@ def diet3():
         print("Please try again.")
     print("\nVolume :", round(t_vol, 2), "ml/kg/day")
     print("Calorie:", round(t_cal, 2), "kcal/kg/day \n")
-    ques = str(input("Want to do anything else? (y/n): "))
-    if ques == "y" or ques == "Y":
-        from main3 import main3
-    else:
-        print("Thanks for using auto-calc!")
-        exit()
 
 # diet3()
 
@@ -286,12 +245,6 @@ def drop_rate3():
     elif drop_fac == "3":
         print("\nAt", int(dpm), "drops/min", round(vol, 2), "ml IV will take ~", int(hr), "hrs")
         print("Drop factor : 1 ml =", inf_set, "microdrops\n")
-    ques = str(input("Want to do anything else? (y/n): "))
-    if ques == "y" or ques == "Y":
-        from main3 import main3
-    else:
-        print("Thanks for using auto-calc!")
-        exit()
 
 # drop_rate3()
 
@@ -301,48 +254,101 @@ def drop_rate3():
 # from message3 import message3
 # imports the function called message, from the file named message
 
-choice = str(input("Choose your module: \
-\n [1] Hypernatremia\
-\n [2] Fluid \
-\n [3] MAP \
-\n [4] Diet\
-\n [5] Drops/min\
-\nEnter the code [1-5]: "))
-if choice == "1":
-    hyperna_msg3()
-    hyperna_calc3()
-    # from hyperna3 import hyperna_msg3
-    # from hyperna3 import hyperna_calc3
-elif choice == "2":
-    choice_2 = str(input("Choose from the list:\
-        \n [1] Severe Sepsis\
-        \n [2] Severe Dehydration\
-        \n [3] Some Dehydration\
-        \n [4] `X'% dehydration\
-        \nEnter the code [1-4]: "))
-    if choice == "2" and choice_2 == "1":
-        sevsepsis3()
-        # from sevsepsis3 import sevsepsis3
-    elif choice == "2" and choice_2 == "2":
-        sevdh3()
-        # from sevdh3 import sevdh3
-    elif choice == "2" and choice_2 == "3":
-        somedh3()
-        # from somedh3 import somedh3
-    elif choice == "2" and choice_2 == "4":
-        xdh3()
-        # from xdh3 import xdh3
-elif choice == "3":
-    map_bp3()
-    # from map_bp3 import map_bp3
-elif choice == "4":
-    diet3()
-    # from diet3 import diet3
-elif choice == "5":
-    drop_rate3()
-    # from drop_rate3 import drop_rate3
-else:
-    print("Please try again.")
+def main():
+    choice = str(input("Choose your module: \
+    \n [1] Hypernatremia\
+    \n [2] Fluid \
+    \n [3] MAP \
+    \n [4] Diet\
+    \n [5] Drops/min\
+    \nEnter the code [1-5]: "))
+    if choice == "1":
+        hyperna_msg3()
+        hyperna_calc3()
+        # from hyperna3 import hyperna_msg3
+        # from hyperna3 import hyperna_calc3
+    elif choice == "2":
+        choice_2 = str(input("Choose from the list:\
+            \n [1] Severe Sepsis\
+            \n [2] Severe Dehydration\
+            \n [3] Some Dehydration\
+            \n [4] `X'% dehydration\
+            \nEnter the code [1-4]: "))
+        if choice == "2" and choice_2 == "1":
+            sevsepsis3()
+            # from sevsepsis3 import sevsepsis3
+        elif choice == "2" and choice_2 == "2":
+            sevdh3()
+            # from sevdh3 import sevdh3
+        elif choice == "2" and choice_2 == "3":
+            somedh3()
+            # from somedh3 import somedh3
+        elif choice == "2" and choice_2 == "4":
+            xdh3()
+            # from xdh3 import xdh3
+    elif choice == "3":
+        map_bp3()
+        # from map_bp3 import map_bp3
+    elif choice == "4":
+        diet3()
+        # from diet3 import diet3
+    elif choice == "5":
+        drop_rate3()
+        # from drop_rate3 import drop_rate3
+    else:
+        print("Please try again.")
+    user_resp = input("Are you done? [y/n]: ")
+    user_resp_l = user_resp.lower()
+    if user_resp_l == "n":
+        main()
+    else:
+        print("\n>>> Thank you for using auto-calc! <<<")
+        exit()
 
-#input("Press `Enter' to exit.")
-input("Press `Enter' to exit.")
+if __name__ == "__main__":
+    main()
+
+# choice = str(input("Choose your module: \
+# \n [1] Hypernatremia\
+# \n [2] Fluid \
+# \n [3] MAP \
+# \n [4] Diet\
+# \n [5] Drops/min\
+# \nEnter the code [1-5]: "))
+# if choice == "1":
+#     hyperna_msg3()
+#     hyperna_calc3()
+#     # from hyperna3 import hyperna_msg3
+#     # from hyperna3 import hyperna_calc3
+# elif choice == "2":
+#     choice_2 = str(input("Choose from the list:\
+#         \n [1] Severe Sepsis\
+#         \n [2] Severe Dehydration\
+#         \n [3] Some Dehydration\
+#         \n [4] `X'% dehydration\
+#         \nEnter the code [1-4]: "))
+#     if choice == "2" and choice_2 == "1":
+#         sevsepsis3()
+#         # from sevsepsis3 import sevsepsis3
+#     elif choice == "2" and choice_2 == "2":
+#         sevdh3()
+#         # from sevdh3 import sevdh3
+#     elif choice == "2" and choice_2 == "3":
+#         somedh3()
+#         # from somedh3 import somedh3
+#     elif choice == "2" and choice_2 == "4":
+#         xdh3()
+#         # from xdh3 import xdh3
+# elif choice == "3":
+#     map_bp3()
+#     # from map_bp3 import map_bp3
+# elif choice == "4":
+#     diet3()
+#     # from diet3 import diet3
+# elif choice == "5":
+#     drop_rate3()
+#     # from drop_rate3 import drop_rate3
+# else:
+#     print("Please try again.")
+
+# input("Press `Enter' to exit.")

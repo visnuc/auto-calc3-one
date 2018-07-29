@@ -1,6 +1,6 @@
 # Auto-calc3 (one)
 
-**version 0.0.1**
+**version 0.0.2**
 
 auto-calc3 is a console based program written in Python to automate the calculation and selection of agents, such as, fluids, diets, calories, drops rates for the quick management of situations, e.g. hypernatremia, severe dehydration, malnutrition and such. 
 

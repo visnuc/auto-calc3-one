@@ -1,3 +1,4 @@
+import time # imports time module
 # ------------------------
 # HEADING MESSAGE
 # ------------------------
@@ -6,7 +7,7 @@ def message3():
           "author: Visnu Pritom Chowdhury\n"
           "e-mail: pr3370m@gmail.com\n"
           "\n"
-          ">> BETA PHASE | PLEASE USE WITH CAUTION <<\n")
+          ">> BETA PHASE | USE WITH CAUTION <<\n")
 
 message3()
 
@@ -174,7 +175,7 @@ def map_bp3():
     # MAP formula 2:
     # map_bp = ((sbp-dbp)/3)+dbp
     print("\nMAP is", round(map_bp, 2), "mmHg\
-\n>> Reference value (mm Hg):\n - Child >50\n - Adult >65\n<<")
+\n>> Reference value (mm Hg): Child >50, Adult >65 <<")
 
 
 # map_bp3()
@@ -302,9 +303,11 @@ def main():
     if user_resp_l == "n":
         main()
     else:
-        print("\n>>> Thank you for using auto-calc! <<<")
-        exit()
+        print("\n>>>> Thank you for using auto-calc3! <<<<\
+              \n> This program with close in 3 seconds! <")
+        # exit()
 
 if __name__ == "__main__":
     main()
 
+time.sleep(3) # closes the terminal after 3 seconds

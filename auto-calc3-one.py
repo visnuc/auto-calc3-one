@@ -305,9 +305,9 @@ def main():
     else:
         print("\n>>>> Thank you for using auto-calc3! <<<<\
               \n> This program with close in 3 seconds! <")
-        # exit()
+        time.sleep(3)  # closes the terminal after 3 seconds
+        # exit() # exits immediately
 
 if __name__ == "__main__":
     main()
 
-time.sleep(3) # closes the terminal after 3 seconds

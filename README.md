@@ -20,4 +20,5 @@ At first install Python version 3 on your device, and then simply run the progra
 And when it is run, input at the prompt accordingly and press "Enter". <br>
 The output will be returned to the console. FYI, the decimal numbers will be rounded upto two digits. <br>
 If any wrong input is entered, restart of the program is required. <br>
+https://www.youtube.com/watch?v=mMfIaEzqz7g <br>
 Thanks. 

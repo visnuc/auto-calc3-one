@@ -8,7 +8,7 @@ auto-calc3 is a console based program written in Python to automate the calculat
 
 ## Contributor
 
-- Visnu Pritom Chowdhury <pr3370m@gmail.com>
+- Visnu Pritom Chowdhury <visnu.pritom@icddrb.org>
 
 ---
 

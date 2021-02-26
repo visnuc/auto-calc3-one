@@ -2,9 +2,7 @@
 
 **version 0.0.3**
 
-auto-calc3 is a console based program written in Python to automate the calculation and selection of agents, such as, fluids, diets, calories, drops rates for the quick management of situations, e.g. hypernatremia, severe dehydration, malnutrition and such. 
-
----
+A cross-platform CLI tool, written in Python that interactively outputs the type and volume of fluids required to manage emergency medical conditions including severe hypernatremia, septic and hypovolemic shock. This tool can also ease the calculation of diets, calories, drops rates. 
 
 ## Contributor
 
@@ -22,3 +20,13 @@ The output will be returned to the console. FYI, the decimal numbers will be rou
 If any wrong input is entered, restart of the program is required. <br>
 https://www.youtube.com/watch?v=mMfIaEzqz7g <br>
 Thanks. 
+
+## Contents 
+- Hypernatremia correction 
+- Fluid resuscitation (age and nutritional status specific)
+  - Severe Sepsis            
+  - Severe Dehydration            
+  - Some Dehydration
+- Mean Arterial Pressure (MAP) calculation
+- Diet managememnt 
+- Drop rate calculation 

@@ -28,5 +28,5 @@ Thanks.
   - Severe Dehydration            
   - Some Dehydration
 - Mean Arterial Pressure (MAP) calculation
-- Diet managememnt 
+- Dietary calorie calculation 
 - Drop rate calculation 
